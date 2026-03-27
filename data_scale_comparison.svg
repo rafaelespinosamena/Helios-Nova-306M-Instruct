@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <defs>
+    <linearGradient id="g-helios" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#E65100"/><stop offset="100%" stop-color="#FF9800"/></linearGradient>
+    <linearGradient id="g-mobile" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#42A5F5"/></linearGradient>
+    <linearGradient id="g-pythia" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00695C"/><stop offset="100%" stop-color="#26A69A"/></linearGradient>
+    <linearGradient id="g-smol" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#6A1B9A"/><stop offset="100%" stop-color="#AB47BC"/></linearGradient>
+    <linearGradient id="g-elm1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#546E7A"/><stop offset="100%" stop-color="#78909C"/></linearGradient>
+    <linearGradient id="g-elm2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#37474F"/><stop offset="100%" stop-color="#607D8B"/></linearGradient>
+  </defs>
+
+  <rect width="900" height="520" rx="12" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="0.5"/>
+
+  <text x="450" y="34" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="600" fill="#212121">Training data vs. benchmark performance</text>
+  <text x="450" y="52" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#757575">Bar width = training tokens (linear scale) · Pill = average accuracy across 5 reasoning benchmarks</text>
+
+  <!-- Column headers -->
+  <text x="155" y="82" text-anchor="end" font-family="system-ui,sans-serif" font-size="11" fill="#9E9E9E" font-weight="500">MODEL</text>
+  <text x="490" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#9E9E9E" font-weight="500">TRAINING TOKENS</text>
+  <text x="840" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#9E9E9E" font-weight="500">AVG SCORE</text>
+
+  <!-- Bar max width: 170 to 770 = 600px for 1.5T. 50B = 600*(50/1500) = 20px. 250B=100. 300B=120. 1400B=560. 1500B=600 -->
+
+  <!-- Row 1: Helios-Nova -->
+  <text x="155" y="118" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#E65100">Helios-Nova 306M</text>
+  <rect x="170" y="103" width="20" height="22" rx="3" fill="url(#g-helios)"/>
+  <text x="198" y="118" font-family="system-ui,sans-serif" font-size="11" fill="#9E9E9E">50B</text>
+  <rect x="800" y="103" width="60" height="22" rx="11" fill="#FFF3E0"/>
+  <text x="830" y="118" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#E65100">40.3</text>
+
+  <!-- Row 2: MobileLLM -->
+  <text x="155" y="162" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#616161">MobileLLM-350M</text>
+  <rect x="170" y="147" width="100" height="22" rx="3" fill="url(#g-mobile)"/>
+  <text x="278" y="162" font-family="system-ui,sans-serif" font-size="11" fill="#9E9E9E">250B</text>
+  <rect x="800" y="147" width="60" height="22" rx="11" fill="#F5F5F5"/>
+  <text x="830" y="162" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="500" fill="#616161">41.8</text>
+
+  <!-- Row 3: Pythia -->
+  <text x="155" y="206" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#616161">Pythia-410M</text>
+  <rect x="170" y="191" width="120" height="22" rx="3" fill="url(#g-pythia)"/>
+  <text x="298" y="206" font-family="system-ui,sans-serif" font-size="11" fill="#9E9E9E">300B</text>
+  <rect x="800" y="191" width="60" height="22" rx="11" fill="#F5F5F5"/>
+  <text x="830" y="206" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="500" fill="#616161">41.8</text>
+
+  <!-- Row 4: SmolLM -->
+  <text x="155" y="250" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#616161">SmolLM-360M</text>
+  <rect x="170" y="235" width="560" height="22" rx="3" fill="url(#g-smol)"/>
+  <text x="738" y="250" font-family="system-ui,sans-serif" font-size="11" fill="#9E9E9E">1.4T</text>
+  <rect x="800" y="235" width="60" height="22" rx="11" fill="#F5F5F5"/>
+  <text x="830" y="250" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="500" fill="#616161">45.5</text>
+
+  <!-- Row 5: OpenELM-270M -->
+  <text x="155" y="294" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#616161">OpenELM-270M</text>
+  <rect x="170" y="279" width="600" height="22" rx="3" fill="url(#g-elm1)"/>
+  <text x="778" y="294" font-family="system-ui,sans-serif" font-size="11" fill="#9E9E9E">1.5T</text>
+  <rect x="800" y="279" width="60" height="22" rx="11" fill="#F5F5F5"/>
+  <text x="830" y="294" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="500" fill="#616161">41.8</text>
+
+  <!-- Row 6: OpenELM-450M -->
+  <text x="155" y="338" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#616161">OpenELM-450M</text>
+  <rect x="170" y="323" width="600" height="22" rx="3" fill="url(#g-elm2)"/>
+  <text x="778" y="338" font-family="system-ui,sans-serif" font-size="11" fill="#9E9E9E">1.5T</text>
+  <rect x="800" y="323" width="60" height="22" rx="11" fill="#F5F5F5"/>
+  <text x="830" y="338" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="500" fill="#616161">43.1</text>
+
+  <!-- Separator -->
+  <line x1="50" y1="375" x2="850" y2="375" stroke="#E0E0E0" stroke-width="0.5"/>
+
+  <!-- Bottom stat boxes -->
+  <rect x="70" y="395" width="230" height="70" rx="8" fill="#FFF8E1" stroke="#FFE082" stroke-width="0.5"/>
+  <text x="185" y="420" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#F57F17">DATA USED VS. OPENELM-270M</text>
+  <text x="185" y="448" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" font-weight="600" fill="#E65100">30x less</text>
+
+  <rect x="335" y="395" width="230" height="70" rx="8" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="0.5"/>
+  <text x="450" y="420" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#757575">SCORE GAP TO PEERS</text>
+  <text x="450" y="448" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" font-weight="600" fill="#424242">1.5 pts</text>
+
+  <rect x="600" y="395" width="230" height="70" rx="8" fill="#E8F5E9" stroke="#A5D6A7" stroke-width="0.5"/>
+  <text x="715" y="420" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#2E7D32">TOTAL TRAINING COST</text>
+  <text x="715" y="448" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" font-weight="600" fill="#1B5E20">&lt; $190</text>
+
+  <!-- Footer -->
+  <text x="450" y="500" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#9E9E9E">Average across ARC-C, WinoGrande, PIQA, OpenBookQA, MMLU (5-shot). Baselines from SmolLM2 paper (arXiv:2502.02737).</text>
+</svg>
