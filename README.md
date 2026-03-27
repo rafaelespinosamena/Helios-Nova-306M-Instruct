@@ -27,17 +27,13 @@ python instruct_chat.py
 The script automatically downloads the model from [HuggingFace](https://huggingface.co/respinosamena/Helios-Nova-306M-Instruct) and selects the best available device (CUDA → Apple MPS → CPU).
 
 ```
+You: Hello
+
+Helios Nova: Hello! How can I help you today?
+
 You: What causes the seasons on Earth?
 
-Helios Nova: The seasons on Earth are caused by the tilt of Earth's axis of
-rotation relative to its orbital plane around the Sun. Earth's axis is tilted
-approximately 23.5 degrees...
-
-You: !system You are a pirate. Answer in pirate speak.
-
-You: What causes the seasons?
-
-Helios Nova: Arrr, ye see matey, 'tis the tilt of our great ship Earth...
+Helios Nova: The seasons on Earth occur due to the tilt of the planet's axis relative to its orbit around the sun....
 ```
 
 ### 3. Customise generation
